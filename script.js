@@ -45,7 +45,7 @@ var nightIcons = {
     'partlycloudy': 'wi-night-cloudy'
 };
 new Vue({
-    el: 'body',
+    el: 'html',
     data: {
         weatherIcon: 'wi-cloud-down',
         temp_c: '',
@@ -78,6 +78,9 @@ new Vue({
         isNight: function() {
             var time = (new Date()).getHours();
             return (time > 20) || (time < 6);
+        },
+        getContentColor: function() {
+            return this.isNight ? '#333' : '#eee';
         }
     }
 })
