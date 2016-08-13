@@ -56,7 +56,7 @@ new Vue({
     },
     methods: {
         fetchAPI: function(num) {
-            var urlAPI = 'http://api.wunderground.com/api/f041a6b2e4781d71/conditions/conditions/q/autoip.json';
+            var urlAPI = 'https://api.wunderground.com/api/f041a6b2e4781d71/conditions/conditions/q/autoip.json';
             this.$http.get(urlAPI)
                 .then(
                     function(res) {
